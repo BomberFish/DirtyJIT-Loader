@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RootView: View {
     @State var showError = false
     @State var gradientReversed = false
     var body: some View {
@@ -25,29 +25,7 @@ struct ContentView: View {
             }
             // FIXME: this could be done better :trolley:
             VStack {
-                HStack {
-                    Button(action: {}, label: {Label("Open DMG", systemImage: "doc")})
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(.blue)
-                        .cornerRadius(10)
-                        .buttonStyle(PlainButtonStyle())
-                    Button(action: {}, label: {Label("Open signature", systemImage: "doc")})
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(.blue)
-                        .cornerRadius(10)
-                        .buttonStyle(PlainButtonStyle())
-                }
-                VStack {
-                    Link(destination: URL(string: "https://nightly.link/verygenericname/WDBDDISSH/workflows/main/main")!, label: {
-                        Label("Download support DMGs", systemImage: "arrow.down.circle")
-                    })
-                    .padding()
-                    .foregroundColor(.white)
-                }
-                .background(.blue)
-                .cornerRadius(10)
+                HomeView()
                 Text("DirtyJIT GUI \(appVersion)\nBy BomberFish")
                     .font(.system(.footnote))
                     .multilineTextAlignment(.center)
@@ -76,8 +54,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
     }
 }

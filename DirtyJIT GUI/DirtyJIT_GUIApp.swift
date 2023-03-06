@@ -13,7 +13,7 @@ let appVersion = ((Bundle.main.infoDictionary?["CFBundleShortVersionString"] as?
 struct DirtyJIT_GUIApp: App {
     var body: some Scene {
         WindowGroup("") {
-            ContentView()
+            RootView()
                 .preferredColorScheme(.dark)
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
