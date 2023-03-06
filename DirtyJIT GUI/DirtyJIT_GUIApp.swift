@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let appVersion = ((Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown") + " (" + (Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknown") + ")")
+
 @main
 struct DirtyJIT_GUIApp: App {
     var body: some Scene {

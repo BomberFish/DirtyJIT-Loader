@@ -48,6 +48,10 @@ struct ContentView: View {
                 }
                 .background(.blue)
                 .cornerRadius(10)
+                Text("DirtyJIT GUI \(appVersion)\nBy BomberFish")
+                    .font(.system(.footnote))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color(NSColor.secondaryLabelColor))
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.ultraThinMaterial)
@@ -64,6 +68,7 @@ struct ContentView: View {
                     Text("DirtyJIT")
                         .fontWeight(.bold)
                         .font(.system(.title2))
+                        .foregroundColor(.white)
                 }
                 Spacer()
             }
