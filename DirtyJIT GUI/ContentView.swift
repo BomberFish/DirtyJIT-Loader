@@ -8,29 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    @discardableResult func shell(_ command: String) -> (String?, Int32) {
+    @State var showError = false
+    @discardableResult // Add to suppress warnings when you don't want/need a result
+    func safeShell(_ command: String) throws -> String {
         let task = Process()
-        task.launchPath = "/bin/bash"
-        task.arguments = ["-c", command]
         let pipe = Pipe()
+        
         task.standardOutput = pipe
         task.standardError = pipe
-        task.launch()
+        task.arguments = ["-c", command]
+        task.executableURL = URL(fileURLWithPath: "/bin/bash") //<--updated
+        task.standardInput = nil
+
+        try task.run() //<--updated
+        
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: .utf8)
-        task.waitUntilExit()
-        return (output, task.terminationStatus)
-      }
+        let output = String(data: data, encoding: .utf8)!
+        
+        return output
+    }
     var body: some View {
         VStack {
             Text("Download from https://github.com/verygenericname/WDBDDISSH/actions")
             Text("Unzip into ~/Downloads/JIT")
+            Text("Rename files to JIT.dmg and JIT.dmg.signature")
             Button(action: {
-                    self.shell("ideviceimagemounter ~/Downloads/JIT/*.dmg ~/Downloads/JIT/*.signature")
+                    do {
+                        print(try safeShell("ideviceimagemounter ~/Downloads/JIT/JIT.dmg ~/Downloads/JIT/JIT.dmg.signature"))
+                    }
+                    catch {
+                        showError = true
+                        print("\(error)") //handle or silence the error here
+                    }
+
                   }) {
                     Text("Load it!").font(.body)
                   }
         }
+        .alert("Error!", isPresented: $showError) {
+                    Button("OK", role: .cancel) { }
+                }
         .padding()
     }
 }
