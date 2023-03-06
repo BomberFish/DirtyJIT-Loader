@@ -30,8 +30,8 @@ func getalldevicenames() -> [String] {
         
         var name: UnsafeMutablePointer<Int8>? = nil
         lockdownd_get_device_name(lockdown, &name);
-        devicenames.append(String(cString: name!))
         print (" - " + String(cString: name!))
+        devicenames.append(String(cString: name!))
         
     }
     
