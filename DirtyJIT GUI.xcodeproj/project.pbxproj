@@ -14,11 +14,13 @@
 		D6E552F929B61D510083E6A5 /* DirtyJIT_GUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552F829B61D510083E6A5 /* DirtyJIT_GUITests.swift */; };
 		D6E5530329B61D510083E6A5 /* DirtyJIT_GUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5530229B61D510083E6A5 /* DirtyJIT_GUIUITests.swift */; };
 		D6E5530529B61D510083E6A5 /* DirtyJIT_GUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5530429B61D510083E6A5 /* DirtyJIT_GUIUITestsLaunchTests.swift */; };
-		D6E5531329B653200083E6A5 /* iMobileDevice in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531229B653200083E6A5 /* iMobileDevice */; };
-		D6E5531529B653200083E6A5 /* libfragmentzip in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531429B653200083E6A5 /* libfragmentzip */; };
-		D6E5531729B653200083E6A5 /* libimobiledevice in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531629B653200083E6A5 /* libimobiledevice */; };
-		D6E5531929B653200083E6A5 /* libplist in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531829B653200083E6A5 /* libplist */; };
-		D6E5531B29B653200083E6A5 /* libusbmuxd in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531A29B653200083E6A5 /* libusbmuxd */; };
+		D6E5531F29B66E4D0083E6A5 /* libcrypto.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5531E29B66E4D0083E6A5 /* libcrypto.3.dylib */; };
+		D6E5532129B66E8E0083E6A5 /* libimobiledevice-1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5532029B66E8E0083E6A5 /* libimobiledevice-1.0.6.dylib */; };
+		D6E5532329B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5532229B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib */; };
+		D6E5532529B66ED00083E6A5 /* libplist-2.0.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5532429B66ED00083E6A5 /* libplist-2.0.3.dylib */; };
+		D6E5535329B673120083E6A5 /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5535029B673110083E6A5 /* libcrypto.1.1.dylib */; };
+		D6E5535429B673120083E6A5 /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5535129B673120083E6A5 /* libssl.1.1.dylib */; };
+		D6E5535529B673130083E6A5 /* libssl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E5535229B673120083E6A5 /* libssl.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,52 @@
 		D6E552FE29B61D510083E6A5 /* DirtyJIT GUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirtyJIT GUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E5530229B61D510083E6A5 /* DirtyJIT_GUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_GUIUITests.swift; sourceTree = "<group>"; };
 		D6E5530429B61D510083E6A5 /* DirtyJIT_GUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_GUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6E5531E29B66E4D0083E6A5 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.3.dylib; sourceTree = "<group>"; };
+		D6E5532029B66E8E0083E6A5 /* libimobiledevice-1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libimobiledevice-1.0.6.dylib"; sourceTree = "<group>"; };
+		D6E5532229B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libusbmuxd-2.0.6.dylib"; sourceTree = "<group>"; };
+		D6E5532429B66ED00083E6A5 /* libplist-2.0.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libplist-2.0.3.dylib"; sourceTree = "<group>"; };
+		D6E5532829B66F980083E6A5 /* installation_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = installation_proxy.h; sourceTree = "<group>"; };
+		D6E5532929B66F980083E6A5 /* companion_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companion_proxy.h; sourceTree = "<group>"; };
+		D6E5532A29B66F980083E6A5 /* notification_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = notification_proxy.h; sourceTree = "<group>"; };
+		D6E5532B29B66F980083E6A5 /* restore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = restore.h; sourceTree = "<group>"; };
+		D6E5532C29B66F980083E6A5 /* mobilebackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobilebackup.h; sourceTree = "<group>"; };
+		D6E5532D29B66F980083E6A5 /* misagent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misagent.h; sourceTree = "<group>"; };
+		D6E5532E29B66F980083E6A5 /* property_list_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = property_list_service.h; sourceTree = "<group>"; };
+		D6E5532F29B66F980083E6A5 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
+		D6E5533029B66F980083E6A5 /* mobileactivation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobileactivation.h; sourceTree = "<group>"; };
+		D6E5533129B66F980083E6A5 /* screenshotr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screenshotr.h; sourceTree = "<group>"; };
+		D6E5533229B66F980083E6A5 /* file_relay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_relay.h; sourceTree = "<group>"; };
+		D6E5533329B66F980083E6A5 /* heartbeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heartbeat.h; sourceTree = "<group>"; };
+		D6E5533429B66F980083E6A5 /* preboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preboard.h; sourceTree = "<group>"; };
+		D6E5533529B66F980083E6A5 /* mobilebackup2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobilebackup2.h; sourceTree = "<group>"; };
+		D6E5533629B66F980083E6A5 /* mobile_image_mounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobile_image_mounter.h; sourceTree = "<group>"; };
+		D6E5533729B66F980083E6A5 /* lockdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lockdown.h; sourceTree = "<group>"; };
+		D6E5533829B66F980083E6A5 /* syslog_relay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syslog_relay.h; sourceTree = "<group>"; };
+		D6E5533929B66F980083E6A5 /* webinspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webinspector.h; sourceTree = "<group>"; };
+		D6E5533A29B66F980083E6A5 /* libimobiledevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libimobiledevice.h; sourceTree = "<group>"; };
+		D6E5533B29B66F980083E6A5 /* debugserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debugserver.h; sourceTree = "<group>"; };
+		D6E5533C29B66F980083E6A5 /* sbservices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sbservices.h; sourceTree = "<group>"; };
+		D6E5533D29B66F980083E6A5 /* diagnostics_relay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diagnostics_relay.h; sourceTree = "<group>"; };
+		D6E5533E29B66F980083E6A5 /* afc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = afc.h; sourceTree = "<group>"; };
+		D6E5533F29B66F980083E6A5 /* mobilesync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobilesync.h; sourceTree = "<group>"; };
+		D6E5534029B66F980083E6A5 /* house_arrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = house_arrest.h; sourceTree = "<group>"; };
+		D6E5534229B6711C0083E6A5 /* Structure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structure.h; sourceTree = "<group>"; };
+		D6E5534329B6711C0083E6A5 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		D6E5534429B6711C0083E6A5 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		D6E5534529B6711C0083E6A5 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		D6E5534629B6711C0083E6A5 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		D6E5534729B6711C0083E6A5 /* Real.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Real.h; sourceTree = "<group>"; };
+		D6E5534829B6711C0083E6A5 /* Boolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boolean.h; sourceTree = "<group>"; };
+		D6E5534929B6711C0083E6A5 /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
+		D6E5534A29B6711C0083E6A5 /* plist++.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "plist++.h"; sourceTree = "<group>"; };
+		D6E5534B29B6711C0083E6A5 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		D6E5534C29B6711C0083E6A5 /* Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Integer.h; sourceTree = "<group>"; };
+		D6E5534D29B6711C0083E6A5 /* plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plist.h; sourceTree = "<group>"; };
+		D6E5534E29B6711C0083E6A5 /* Uid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uid.h; sourceTree = "<group>"; };
+		D6E5534F29B6711C0083E6A5 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
+		D6E5535029B673110083E6A5 /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.1.1.dylib; sourceTree = "<group>"; };
+		D6E5535129B673120083E6A5 /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.1.1.dylib; sourceTree = "<group>"; };
+		D6E5535229B673120083E6A5 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +105,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6E5531529B653200083E6A5 /* libfragmentzip in Frameworks */,
-				D6E5531B29B653200083E6A5 /* libusbmuxd in Frameworks */,
-				D6E5531329B653200083E6A5 /* iMobileDevice in Frameworks */,
-				D6E5531729B653200083E6A5 /* libimobiledevice in Frameworks */,
-				D6E5531929B653200083E6A5 /* libplist in Frameworks */,
+				D6E5532329B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib in Frameworks */,
+				D6E5532129B66E8E0083E6A5 /* libimobiledevice-1.0.6.dylib in Frameworks */,
+				D6E5531F29B66E4D0083E6A5 /* libcrypto.3.dylib in Frameworks */,
+				D6E5535529B673130083E6A5 /* libssl.3.dylib in Frameworks */,
+				D6E5535329B673120083E6A5 /* libcrypto.1.1.dylib in Frameworks */,
+				D6E5532529B66ED00083E6A5 /* libplist-2.0.3.dylib in Frameworks */,
+				D6E5535429B673120083E6A5 /* libssl.1.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */,
+				D6E5531C29B66E0A0083E6A5 /* libimobiledevice */,
 				D6E552E829B61D4E0083E6A5 /* ContentView.swift */,
 				D6E552EA29B61D510083E6A5 /* Assets.xcassets */,
 				D6E552EC29B61D510083E6A5 /* DirtyJIT_GUI.entitlements */,
@@ -139,6 +190,83 @@
 			path = "DirtyJIT GUIUITests";
 			sourceTree = "<group>";
 		};
+		D6E5531C29B66E0A0083E6A5 /* libimobiledevice */ = {
+			isa = PBXGroup;
+			children = (
+				D6E5531E29B66E4D0083E6A5 /* libcrypto.3.dylib */,
+				D6E5532229B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib */,
+				D6E5532629B66EFC0083E6A5 /* include */,
+				D6E5532029B66E8E0083E6A5 /* libimobiledevice-1.0.6.dylib */,
+				D6E5532429B66ED00083E6A5 /* libplist-2.0.3.dylib */,
+				D6E5535029B673110083E6A5 /* libcrypto.1.1.dylib */,
+				D6E5535129B673120083E6A5 /* libssl.1.1.dylib */,
+				D6E5535229B673120083E6A5 /* libssl.3.dylib */,
+			);
+			path = libimobiledevice;
+			sourceTree = "<group>";
+		};
+		D6E5532629B66EFC0083E6A5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D6E5534129B6711C0083E6A5 /* plist */,
+				D6E5532729B66F980083E6A5 /* libimobiledevice */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D6E5532729B66F980083E6A5 /* libimobiledevice */ = {
+			isa = PBXGroup;
+			children = (
+				D6E5532829B66F980083E6A5 /* installation_proxy.h */,
+				D6E5532929B66F980083E6A5 /* companion_proxy.h */,
+				D6E5532A29B66F980083E6A5 /* notification_proxy.h */,
+				D6E5532B29B66F980083E6A5 /* restore.h */,
+				D6E5532C29B66F980083E6A5 /* mobilebackup.h */,
+				D6E5532D29B66F980083E6A5 /* misagent.h */,
+				D6E5532E29B66F980083E6A5 /* property_list_service.h */,
+				D6E5532F29B66F980083E6A5 /* service.h */,
+				D6E5533029B66F980083E6A5 /* mobileactivation.h */,
+				D6E5533129B66F980083E6A5 /* screenshotr.h */,
+				D6E5533229B66F980083E6A5 /* file_relay.h */,
+				D6E5533329B66F980083E6A5 /* heartbeat.h */,
+				D6E5533429B66F980083E6A5 /* preboard.h */,
+				D6E5533529B66F980083E6A5 /* mobilebackup2.h */,
+				D6E5533629B66F980083E6A5 /* mobile_image_mounter.h */,
+				D6E5533729B66F980083E6A5 /* lockdown.h */,
+				D6E5533829B66F980083E6A5 /* syslog_relay.h */,
+				D6E5533929B66F980083E6A5 /* webinspector.h */,
+				D6E5533A29B66F980083E6A5 /* libimobiledevice.h */,
+				D6E5533B29B66F980083E6A5 /* debugserver.h */,
+				D6E5533C29B66F980083E6A5 /* sbservices.h */,
+				D6E5533D29B66F980083E6A5 /* diagnostics_relay.h */,
+				D6E5533E29B66F980083E6A5 /* afc.h */,
+				D6E5533F29B66F980083E6A5 /* mobilesync.h */,
+				D6E5534029B66F980083E6A5 /* house_arrest.h */,
+			);
+			path = libimobiledevice;
+			sourceTree = "<group>";
+		};
+		D6E5534129B6711C0083E6A5 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				D6E5534229B6711C0083E6A5 /* Structure.h */,
+				D6E5534329B6711C0083E6A5 /* Data.h */,
+				D6E5534429B6711C0083E6A5 /* Key.h */,
+				D6E5534529B6711C0083E6A5 /* Date.h */,
+				D6E5534629B6711C0083E6A5 /* Node.h */,
+				D6E5534729B6711C0083E6A5 /* Real.h */,
+				D6E5534829B6711C0083E6A5 /* Boolean.h */,
+				D6E5534929B6711C0083E6A5 /* Dictionary.h */,
+				D6E5534A29B6711C0083E6A5 /* plist++.h */,
+				D6E5534B29B6711C0083E6A5 /* Array.h */,
+				D6E5534C29B6711C0083E6A5 /* Integer.h */,
+				D6E5534D29B6711C0083E6A5 /* plist.h */,
+				D6E5534E29B6711C0083E6A5 /* Uid.h */,
+				D6E5534F29B6711C0083E6A5 /* String.h */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,11 +284,6 @@
 			);
 			name = "DirtyJIT GUI";
 			packageProductDependencies = (
-				D6E5531229B653200083E6A5 /* iMobileDevice */,
-				D6E5531429B653200083E6A5 /* libfragmentzip */,
-				D6E5531629B653200083E6A5 /* libimobiledevice */,
-				D6E5531829B653200083E6A5 /* libplist */,
-				D6E5531A29B653200083E6A5 /* libusbmuxd */,
 			);
 			productName = "DirtyJIT GUI";
 			productReference = D6E552E329B61D4E0083E6A5 /* DirtyJIT GUI.app */;
@@ -235,7 +358,6 @@
 			);
 			mainGroup = D6E552DA29B61D4E0083E6A5;
 			packageReferences = (
-				D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */,
 			);
 			productRefGroup = D6E552E429B61D4E0083E6A5 /* Products */;
 			projectDirPath = "";
@@ -453,6 +575,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.bomberfish.DirtyJIT-GUI";
@@ -493,6 +625,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.bomberfish.DirtyJIT-GUI";
@@ -636,45 +778,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SideStore/iMobileDevice.swift";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D6E5531229B653200083E6A5 /* iMobileDevice */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
-			productName = iMobileDevice;
-		};
-		D6E5531429B653200083E6A5 /* libfragmentzip */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
-			productName = libfragmentzip;
-		};
-		D6E5531629B653200083E6A5 /* libimobiledevice */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
-			productName = libimobiledevice;
-		};
-		D6E5531829B653200083E6A5 /* libplist */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
-			productName = libplist;
-		};
-		D6E5531A29B653200083E6A5 /* libusbmuxd */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
-			productName = libusbmuxd;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6E552DB29B61D4E0083E6A5 /* Project object */;
 }
