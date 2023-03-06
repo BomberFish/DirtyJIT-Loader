@@ -34,7 +34,7 @@ struct HomeView: View {
             }
             .background(.blue)
             .cornerRadius(10)
-            Button(action: {}, label: {Label("the funny", systemImage: "ladybug")})
+            Button(action: {getalldevicenames()}, label: {Label("the funny", systemImage: "ladybug")})
                 .padding()
                 .foregroundColor(.white)
                 .background(.blue)

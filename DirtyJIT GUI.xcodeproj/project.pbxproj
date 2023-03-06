@@ -69,6 +69,7 @@
 		D6E553D329B6A7980083E6A5 /* afc.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E553A929B6A6DD0083E6A5 /* afc.h */; };
 		D6E553D429B6A7980083E6A5 /* mobilesync.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E553AA29B6A6DD0083E6A5 /* mobilesync.h */; };
 		D6E553D529B6A7980083E6A5 /* house_arrest.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E553AB29B6A6DD0083E6A5 /* house_arrest.h */; };
+		D6E553D729B6AB550083E6A5 /* DeviceInterfacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		D6E553AA29B6A6DD0083E6A5 /* mobilesync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobilesync.h; sourceTree = "<group>"; };
 		D6E553AB29B6A6DD0083E6A5 /* house_arrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = house_arrest.h; sourceTree = "<group>"; };
 		D6E553AC29B6A6FD0083E6A5 /* libimobiledevice-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libimobiledevice-bridge.h"; sourceTree = "<group>"; };
+		D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInterfacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				D6E5531C29B66E0A0083E6A5 /* libimobiledevice */,
 				D6E552E829B61D4E0083E6A5 /* ContentView.swift */,
 				D6E5536429B6A4580083E6A5 /* HomeView.swift */,
+				D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */,
 				D6E5535F29B69B8A0083E6A5 /* Extensions */,
 				D6E552EA29B61D510083E6A5 /* Assets.xcassets */,
 				D6E552ED29B61D510083E6A5 /* Preview Content */,
@@ -536,6 +539,7 @@
 				D6E5536529B6A4580083E6A5 /* HomeView.swift in Sources */,
 				D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */,
 				D6E5536129B69B940083E6A5 /* Color.swift in Sources */,
+				D6E553D729B6AB550083E6A5 /* DeviceInterfacing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,7 +740,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "DirtyJIT\\ GUI/libimobiledevice/includes/libimobiledevice-bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DirtyJIT GUI/libimobiledevice/includes/libimobiledevice-bridge.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -792,7 +796,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "DirtyJIT\\ GUI/libimobiledevice/includes/libimobiledevice-bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "DirtyJIT GUI/libimobiledevice/includes/libimobiledevice-bridge.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

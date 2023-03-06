@@ -15,6 +15,9 @@ struct DirtyJIT_GUIApp: App {
         WindowGroup("") {
             RootView()
                 .preferredColorScheme(.dark)
+                .onAppear {
+                    print("DirtyJIT GUI version \(appVersion)")
+                }
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
         .windowStyle(HiddenTitleBarWindowStyle())
