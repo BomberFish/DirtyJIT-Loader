@@ -14,6 +14,7 @@ struct DirtyJIT_GUIApp: App {
     var body: some Scene {
         WindowGroup("") {
             ContentView()
+                .preferredColorScheme(.dark)
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
         .windowStyle(HiddenTitleBarWindowStyle())
