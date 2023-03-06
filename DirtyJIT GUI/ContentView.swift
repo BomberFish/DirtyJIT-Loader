@@ -9,32 +9,64 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showError = false
+    @State var gradientReversed = false
     var body: some View {
-        VStack {
-            Text("Download from https://github.com/verygenericname/WDBDDISSH/actions")
-            Text("Unzip into ~/Downloads/JIT")
-            Text("Rename files to JIT.dmg and JIT.dmg.signature")
-            Button(action: {
-
-                  }) {
-                    Text("Load it!")
-                  }
-        }
-        .alert("Error!", isPresented: $showError) {
-                    Button("OK", role: .cancel) { }
+        ZStack {
+            LinearGradient(
+                colors: [.blue, .teal],
+                startPoint: gradientReversed ? .topLeading : .bottomLeading,
+                endPoint: gradientReversed ? .bottomTrailing : .topTrailing
+            )
+            .ignoresSafeArea()
+            .onAppear {
+                withAnimation(.linear(duration: 10.0).repeatForever(autoreverses: true)) {
+                    gradientReversed.toggle()
                 }
-        .padding()
-        .toolbar {
-            Spacer()
-            HStack {
-                Image("DirtyJIT-Symbolic")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Text("DirtyJIT")
-                    .fontWeight(.bold)
-                    .font(.system(.title2))
             }
-            Spacer()
+            // FIXME: this could be done better :trolley:
+            VStack {
+                HStack {
+                    Button(action: {}, label: {Label("Open DMG", systemImage: "doc")})
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .cornerRadius(10)
+                        .buttonStyle(PlainButtonStyle())
+                    Button(action: {}, label: {Label("Open signature", systemImage: "doc")})
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .cornerRadius(10)
+                        .buttonStyle(PlainButtonStyle())
+                }
+                VStack {
+                    Link(destination: URL(string: "https://nightly.link/verygenericname/WDBDDISSH/workflows/main/main")!, label: {
+                        Label("Download support DMGs", systemImage: "arrow.down.circle")
+                    })
+                    .padding()
+                    .foregroundColor(.white)
+                }
+                .background(.blue)
+                .cornerRadius(10)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.ultraThinMaterial)
+            
+            .alert("Error!", isPresented: $showError) {
+                Button("OK", role: .cancel) { }
+            }
+            .toolbar {
+                Spacer()
+                HStack {
+                    Image("DirtyJIT-Symbolic")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    Text("DirtyJIT")
+                        .fontWeight(.bold)
+                        .font(.system(.title2))
+                }
+                Spacer()
+            }
         }
     }
 }

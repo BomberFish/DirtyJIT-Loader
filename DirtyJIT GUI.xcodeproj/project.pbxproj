@@ -28,6 +28,7 @@
 		D6E5535A29B673DA0083E6A5 /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D6E5535129B673120083E6A5 /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D6E5535B29B673DA0083E6A5 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D6E5535229B673120083E6A5 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D6E5535C29B673DA0083E6A5 /* libusbmuxd-2.0.6.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D6E5532229B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D6E5536129B69B940083E6A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5536029B69B940083E6A5 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		D6E5535029B673110083E6A5 /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.1.1.dylib; sourceTree = "<group>"; };
 		D6E5535129B673120083E6A5 /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.1.1.dylib; sourceTree = "<group>"; };
 		D6E5535229B673120083E6A5 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.3.dylib; sourceTree = "<group>"; };
+		D6E5536029B69B940083E6A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */,
 				D6E5531C29B66E0A0083E6A5 /* libimobiledevice */,
 				D6E552E829B61D4E0083E6A5 /* ContentView.swift */,
+				D6E5535F29B69B8A0083E6A5 /* Extensions */,
 				D6E552EA29B61D510083E6A5 /* Assets.xcassets */,
 				D6E552ED29B61D510083E6A5 /* Preview Content */,
 			);
@@ -290,6 +293,14 @@
 				D6E5534F29B6711C0083E6A5 /* String.h */,
 			);
 			path = plist;
+			sourceTree = "<group>";
+		};
+		D6E5535F29B69B8A0083E6A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6E5536029B69B940083E6A5 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +440,7 @@
 			files = (
 				D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */,
 				D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */,
+				D6E5536129B69B940083E6A5 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +632,7 @@
 					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.bomberfish.DirtyJIT-GUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -675,7 +687,7 @@
 					"$(PROJECT_DIR)/DirtyJIT\\ GUI/libimobiledevice",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.bomberfish.DirtyJIT-GUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
