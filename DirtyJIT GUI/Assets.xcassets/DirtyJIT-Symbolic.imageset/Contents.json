@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "dirtyjit_symbol.svg",
+      "filename" : "dirtyjit_symbol-1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dirtyjit_symbol 1.svg",
+      "filename" : "dirtyjit_symbol-2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dirtyjit_symbol 2.svg",
+      "filename" : "dirtyjit_symbol-3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

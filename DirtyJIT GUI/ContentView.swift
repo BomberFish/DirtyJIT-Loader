@@ -24,6 +24,18 @@ struct ContentView: View {
                     Button("OK", role: .cancel) { }
                 }
         .padding()
+        .toolbar {
+            Spacer()
+            HStack {
+                Image("DirtyJIT-Symbolic")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("DirtyJIT")
+                    .fontWeight(.bold)
+                    .font(.system(.title2))
+            }
+            Spacer()
+        }
     }
 }
 

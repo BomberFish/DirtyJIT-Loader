@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct DirtyJIT_GUIApp: App {
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("") {
             ContentView()
         }
+        .windowToolbarStyle(UnifiedWindowToolbarStyle())
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
