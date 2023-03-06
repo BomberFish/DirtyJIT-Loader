@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import libimobiledevice
 
 struct ContentView: View {
     @State var showError = false

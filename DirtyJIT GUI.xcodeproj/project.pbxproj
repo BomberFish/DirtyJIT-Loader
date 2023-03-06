@@ -14,6 +14,11 @@
 		D6E552F929B61D510083E6A5 /* DirtyJIT_GUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552F829B61D510083E6A5 /* DirtyJIT_GUITests.swift */; };
 		D6E5530329B61D510083E6A5 /* DirtyJIT_GUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5530229B61D510083E6A5 /* DirtyJIT_GUIUITests.swift */; };
 		D6E5530529B61D510083E6A5 /* DirtyJIT_GUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5530429B61D510083E6A5 /* DirtyJIT_GUIUITestsLaunchTests.swift */; };
+		D6E5531329B653200083E6A5 /* iMobileDevice in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531229B653200083E6A5 /* iMobileDevice */; };
+		D6E5531529B653200083E6A5 /* libfragmentzip in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531429B653200083E6A5 /* libfragmentzip */; };
+		D6E5531729B653200083E6A5 /* libimobiledevice in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531629B653200083E6A5 /* libimobiledevice */; };
+		D6E5531929B653200083E6A5 /* libplist in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531829B653200083E6A5 /* libplist */; };
+		D6E5531B29B653200083E6A5 /* libusbmuxd in Frameworks */ = {isa = PBXBuildFile; productRef = D6E5531A29B653200083E6A5 /* libusbmuxd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E5531529B653200083E6A5 /* libfragmentzip in Frameworks */,
+				D6E5531B29B653200083E6A5 /* libusbmuxd in Frameworks */,
+				D6E5531329B653200083E6A5 /* iMobileDevice in Frameworks */,
+				D6E5531729B653200083E6A5 /* libimobiledevice in Frameworks */,
+				D6E5531929B653200083E6A5 /* libplist in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +155,13 @@
 			dependencies = (
 			);
 			name = "DirtyJIT GUI";
+			packageProductDependencies = (
+				D6E5531229B653200083E6A5 /* iMobileDevice */,
+				D6E5531429B653200083E6A5 /* libfragmentzip */,
+				D6E5531629B653200083E6A5 /* libimobiledevice */,
+				D6E5531829B653200083E6A5 /* libplist */,
+				D6E5531A29B653200083E6A5 /* libusbmuxd */,
+			);
 			productName = "DirtyJIT GUI";
 			productReference = D6E552E329B61D4E0083E6A5 /* DirtyJIT GUI.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +234,9 @@
 				Base,
 			);
 			mainGroup = D6E552DA29B61D4E0083E6A5;
+			packageReferences = (
+				D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */,
+			);
 			productRefGroup = D6E552E429B61D4E0083E6A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -616,6 +636,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SideStore/iMobileDevice.swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6E5531229B653200083E6A5 /* iMobileDevice */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
+			productName = iMobileDevice;
+		};
+		D6E5531429B653200083E6A5 /* libfragmentzip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
+			productName = libfragmentzip;
+		};
+		D6E5531629B653200083E6A5 /* libimobiledevice */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
+			productName = libimobiledevice;
+		};
+		D6E5531829B653200083E6A5 /* libplist */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
+			productName = libplist;
+		};
+		D6E5531A29B653200083E6A5 /* libusbmuxd */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E5531129B653200083E6A5 /* XCRemoteSwiftPackageReference "iMobileDevice" */;
+			productName = libusbmuxd;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6E552DB29B61D4E0083E6A5 /* Project object */;
 }

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "imobiledevice.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SideStore/iMobileDevice.swift",
+      "state" : {
+        "branch" : "main",
+        "revision" : "74e481106dd155c0cd21bca6795fd9fe5f751654"
+      }
+    },
+    {
+      "identity" : "openssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/OpenSSL.git",
+      "state" : {
+        "revision" : "87f41bf9488e7dd2b0de2ab97cb3eafc7304e0e6",
+        "version" : "1.1.2000"
+      }
+    }
+  ],
+  "version" : 2
+}
