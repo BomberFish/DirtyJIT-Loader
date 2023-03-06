@@ -8,12 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @discardableResult func shell(_ command: String) -> (String?, Int32) {
+        let task = Process()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c", command]
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        task.standardError = pipe
+        task.launch()
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: .utf8)
+        task.waitUntilExit()
+        return (output, task.terminationStatus)
+      }
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Download from https://github.com/verygenericname/WDBDDISSH/actions")
+            Text("Unzip into ~/Downloads/JIT")
+            Button(action: {
+                    self.shell("ideviceimagemounter ~/Downloads/JIT/*.dmg ~/Downloads/JIT/*.signature")
+                  }) {
+                    Text("Load it!").font(.body)
+                  }
         }
         .padding()
     }
