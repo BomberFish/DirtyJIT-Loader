@@ -36,8 +36,6 @@ struct RootView: View {
                                 ActionView(device: selectedDevice)
                                 VStack {
                                     Label("Back", systemImage: "chevron.left")
-                                        .padding()
-                                        .background(.blue)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .buttonStyle(PlainButtonStyle())
                                 }
@@ -67,6 +65,7 @@ struct RootView: View {
                                                 .background(.blue)
                                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                                 .buttonStyle(PlainButtonStyle())
+                                                .foregroundColor(.white)
                                         }
                                         .onTapGesture {
                                             allDevices = getDevices()
@@ -91,7 +90,7 @@ struct RootView: View {
                                                     Text(device.name)
                                                         .font(.system(.title2))
                                                     if redactUUID {
-                                                        Text("0000****-************")
+                                                        Text("0000XXXX-XXXXXXXXXXXXXXXX")
                                                     } else {
                                                         Text(device.uuid)
                                                     }
