@@ -12,6 +12,7 @@ struct RootView: View {
     @State var gradientReversed = false
     @State var redactUUID = UserDefaults.standard.bool(forKey: "redactUUID")
     @State var allDevices = getDevices()
+    
     var body: some View {
         //NavigationView {
             ZStack {
@@ -65,6 +66,14 @@ struct RootView: View {
                                 .frame(maxWidth: 450, maxHeight: 200)
                                 .background(.regularMaterial)
                                 .cornerRadius(10)
+                            
+                            .onTapGesture {
+                                if getDevices().isEmpty {
+                                    allDevices = []
+                                } else {
+                                    print("Selected \(device.name)")
+                                }
+                            }
                             }
                         }
                     }
