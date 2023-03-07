@@ -9,23 +9,27 @@ import SwiftUI
 
 struct ActionView: View {
     @State public var device: iDevice
-    @State var dmgPath = ""
-    @State var sigPath = ""
+    @State var dmgPath = "Choose DMG"
+    @State var sigPath = "Choose Signature"
+    @State private var viewOpacity = 0.0
+    @State var dmgChosen = false
+    @State var sigChosen = false
     var body: some View {
         VStack {
             Text(device.name)
                 .font(.system(.largeTitle))
             HStack {
                 VStack {
-                    Text(dmgPath)
+                    // Text(dmgPath)
                     VStack {
-                        Label("Choose DMG", systemImage: "doc")
+                        Label(dmgPath, systemImage: dmgChosen ? "checkmark.circle" : "doc")
                             .padding()
                             .background(.blue)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .buttonStyle(PlainButtonStyle())
                             .foregroundColor(.white)
                     }
+                    .opacity(dmgChosen ? 0.6 : 1)
                     .onTapGesture {
                         print("would open dmg")
                         let panel = NSOpenPanel()
@@ -35,19 +39,22 @@ struct ActionView: View {
                         panel.allowedFileTypes = ["dmg"]
                         if panel.runModal() == .OK {
                             self.dmgPath = panel.url?.lastPathComponent ?? "<none>"
+                            dmgChosen = true
                         }
                     }
                 }
                 VStack {
-                    Text(sigPath)
+                    // Text(sigPath)
                     VStack {
-                        Label("Choose DMG Signature", systemImage: "doc")
+                        Label(sigPath, systemImage: sigChosen ? "checkmark.circle" : "doc")
                             .padding()
                             .background(.blue)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .buttonStyle(PlainButtonStyle())
                             .foregroundColor(.white)
+                        
                     }
+                    .opacity(sigChosen ? 0.6 : 1)
                     .onTapGesture {
                         print("would open dmg sig")
                         let panel = NSOpenPanel()
@@ -57,6 +64,7 @@ struct ActionView: View {
                         panel.allowedFileTypes = ["signature"]
                         if panel.runModal() == .OK {
                             self.sigPath = panel.url?.lastPathComponent ?? "<none>"
+                            sigChosen = true
                         }
                     }
                 }
@@ -72,6 +80,17 @@ struct ActionView: View {
             }
             .onTapGesture {
                 NSWorkspace.shared.open(NSURL(string: "https://nightly.link/verygenericname/WDBDDISSH/workflows/main/main")! as URL)
+            }
+        }
+        // .opacity(viewOpacity)
+        .onAppear {
+            withAnimation(.easeInOut(duration: 1)) {
+                viewOpacity = 1.0
+            }
+        }
+        .onDisappear {
+            withAnimation(.easeInOut(duration: 1)) {
+                viewOpacity = 0.0
             }
         }
     }
