@@ -111,7 +111,7 @@
 
 /* Begin PBXFileReference section */
 		D661B0F829B6DA9B00B94379 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D6E552E329B61D4E0083E6A5 /* DirtyJIT GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirtyJIT GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirtyJIT Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_GUIApp.swift; sourceTree = "<group>"; };
 		D6E552E829B61D4E0083E6A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6E552EA29B61D510083E6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		D6E552E429B61D4E0083E6A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6E552E329B61D4E0083E6A5 /* DirtyJIT GUI.app */,
+				D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */,
 				D6E552F429B61D510083E6A5 /* DirtyJIT GUITests.xctest */,
 				D6E552FE29B61D510083E6A5 /* DirtyJIT GUIUITests.xctest */,
 			);
@@ -402,9 +402,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D6E552E229B61D4E0083E6A5 /* DirtyJIT GUI */ = {
+		D6E552E229B61D4E0083E6A5 /* DirtyJIT Loader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6E5530829B61D510083E6A5 /* Build configuration list for PBXNativeTarget "DirtyJIT GUI" */;
+			buildConfigurationList = D6E5530829B61D510083E6A5 /* Build configuration list for PBXNativeTarget "DirtyJIT Loader" */;
 			buildPhases = (
 				D6E553AE29B6A78B0083E6A5 /* Headers */,
 				D6E552DF29B61D4E0083E6A5 /* Sources */,
@@ -416,11 +416,11 @@
 			);
 			dependencies = (
 			);
-			name = "DirtyJIT GUI";
+			name = "DirtyJIT Loader";
 			packageProductDependencies = (
 			);
 			productName = "DirtyJIT GUI";
-			productReference = D6E552E329B61D4E0083E6A5 /* DirtyJIT GUI.app */;
+			productReference = D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D6E552F329B61D510083E6A5 /* DirtyJIT GUITests */ = {
@@ -482,7 +482,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loade" */;
+			buildConfigurationList = D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loader" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -497,7 +497,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6E552E229B61D4E0083E6A5 /* DirtyJIT GUI */,
+				D6E552E229B61D4E0083E6A5 /* DirtyJIT Loader */,
 				D6E552F329B61D510083E6A5 /* DirtyJIT GUITests */,
 				D6E552FD29B61D510083E6A5 /* DirtyJIT GUIUITests */,
 			);
@@ -565,12 +565,12 @@
 /* Begin PBXTargetDependency section */
 		D6E552F629B61D510083E6A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D6E552E229B61D4E0083E6A5 /* DirtyJIT GUI */;
+			target = D6E552E229B61D4E0083E6A5 /* DirtyJIT Loader */;
 			targetProxy = D6E552F529B61D510083E6A5 /* PBXContainerItemProxy */;
 		};
 		D6E5530029B61D510083E6A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D6E552E229B61D4E0083E6A5 /* DirtyJIT GUI */;
+			target = D6E552E229B61D4E0083E6A5 /* DirtyJIT Loader */;
 			targetProxy = D6E552FF29B61D510083E6A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -896,7 +896,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loade" */ = {
+		D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6E5530629B61D510083E6A5 /* Debug */,
@@ -905,7 +905,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6E5530829B61D510083E6A5 /* Build configuration list for PBXNativeTarget "DirtyJIT GUI" */ = {
+		D6E5530829B61D510083E6A5 /* Build configuration list for PBXNativeTarget "DirtyJIT Loader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6E5530929B61D510083E6A5 /* Debug */,

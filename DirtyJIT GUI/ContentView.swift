@@ -45,13 +45,16 @@ struct RootView: View {
                                 }
                                 .padding()
                                 
-                                Button(action: {allDevices = getDevices()}, label: {
+                                VStack {
                                     Label("Rescan", systemImage: "arrow.triangle.2.circlepath")
-                                })
-                                .padding()
-                                .background(.blue)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .buttonStyle(PlainButtonStyle())
+                                        .padding()
+                                        .background(.blue)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .buttonStyle(PlainButtonStyle())
+                                }
+                                .onTapGesture {
+                                    allDevices = getDevices()
+                                }
                             }
                         } else {
                             VStack {
