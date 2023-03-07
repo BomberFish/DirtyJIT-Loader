@@ -482,7 +482,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loader" */;
+			buildConfigurationList = D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loade" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -896,7 +896,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loader" */ = {
+		D6E552DE29B61D4E0083E6A5 /* Build configuration list for PBXProject "DirtyJIT Loade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6E5530629B61D510083E6A5 /* Debug */,

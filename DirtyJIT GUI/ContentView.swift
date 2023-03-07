@@ -54,38 +54,49 @@ struct RootView: View {
                                 .buttonStyle(PlainButtonStyle())
                             }
                         } else {
-                        ForEach(allDevices) {device in
-                            HStack {
-                                Image("iPhone-Notch")
-                                    .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                VStack {
-                                    Text(device.name)
-                                        .font(.system(.title2))
-                                    if redactUUID {
-                                        Text("0000****-************")
-                                    } else {
-                                        Text(device.uuid)
+                            VStack {
+                                if allDevices.count == 1 {
+                                    Text("1 device found")
+                                        .font(.system(.largeTitle))
+                                } else {
+                                    Text(String(allDevices.count))
+                                        .font(.system(.largeTitle))
+                                }
+                                
+                                ForEach(allDevices) {device in
+                                    HStack {
+                                        Image("iPhone-Notch")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                        VStack {
+                                            Text(device.name)
+                                                .font(.system(.title2))
+                                            if redactUUID {
+                                                Text("0000****-************")
+                                            } else {
+                                                Text(device.uuid)
+                                            }
+                                        }
+                                    }
+                                    
+                                    .padding()
+                                    .frame(maxWidth: 450, maxHeight: 200)
+                                    .background(.regularMaterial)
+                                    .cornerRadius(10)
+                                    
+                                    .onTapGesture {
+                                        if getDevices().isEmpty {
+                                            allDevices = []
+                                        } else {
+                                            print("Selected \(device.name)")
+                                        }
                                     }
                                 }
-                            }
-                                .padding()
-                                .frame(maxWidth: 450, maxHeight: 200)
-                                .background(.regularMaterial)
-                                .cornerRadius(10)
-                            
-                            .onTapGesture {
-                                if getDevices().isEmpty {
-                                    allDevices = []
-                                } else {
-                                    print("Selected \(device.name)")
-                                }
-                            }
                             }
                         }
                     }
                     .padding()
-                    Text("DirtyJIT GUI \(appVersion)\nBy BomberFish")
+                    Text("DirtyJIT Loader \(appVersion)\nBy BomberFish")
                         .font(.system(.footnote))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(NSColor.secondaryLabelColor))
