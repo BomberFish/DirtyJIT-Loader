@@ -7,18 +7,18 @@
 
 import Foundation
 
-func getalldevicenames() -> [String] {
+func getDevices() -> [iDevice] {
     print("Getting devices...")
     var i: CInt = 0
     var device_list: UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>? = nil
-    var devicenames: [String] = []
+    var devicenames: [iDevice] = []
     
     idevice_get_device_list(&device_list, &i)
     print("Number of devices: \(i)")
     
     let array = Array(UnsafeBufferPointer(start: device_list, count: Int(i)))
     
-    for var device in array {
+    for device in array {
         let uuid = String(cString: device!)
         
         var dev: idevice_t? = nil
@@ -30,11 +30,20 @@ func getalldevicenames() -> [String] {
         
         var name: UnsafeMutablePointer<Int8>? = nil
         lockdownd_get_device_name(lockdown, &name);
+        
         print (" - " + String(cString: name!))
-        devicenames.append(String(cString: name!))
+        devicenames.append(iDevice(name: String(cString: name!), uuid: String(uuid)))
         
     }
     
     idevice_device_list_free(device_list)
+    print(devicenames)
     return devicenames
+}
+
+struct iDevice: Identifiable, Equatable {
+    /// make sure not to use `id` like ever
+    var id = UUID()
+    var name: String
+    var uuid: String
 }

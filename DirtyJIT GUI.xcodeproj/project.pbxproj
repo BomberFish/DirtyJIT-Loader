@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0F829B6DA9B00B94379 /* SettingsView.swift */; };
 		D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */; };
 		D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E829B61D4E0083E6A5 /* ContentView.swift */; };
 		D6E552EB29B61D510083E6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E552EA29B61D510083E6A5 /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		D6E5535B29B673DA0083E6A5 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D6E5535229B673120083E6A5 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D6E5535C29B673DA0083E6A5 /* libusbmuxd-2.0.6.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D6E5532229B66EAC0083E6A5 /* libusbmuxd-2.0.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D6E5536129B69B940083E6A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5536029B69B940083E6A5 /* Color.swift */; };
-		D6E5536529B6A4580083E6A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5536429B6A4580083E6A5 /* HomeView.swift */; };
 		D6E553AF29B6A7970083E6A5 /* Structure.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E5538429B6A6DD0083E6A5 /* Structure.h */; };
 		D6E553B029B6A7980083E6A5 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E5538529B6A6DD0083E6A5 /* Data.h */; };
 		D6E553B129B6A7980083E6A5 /* Key.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E5538629B6A6DD0083E6A5 /* Key.h */; };
@@ -110,6 +110,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D661B0F829B6DA9B00B94379 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D6E552E329B61D4E0083E6A5 /* DirtyJIT GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirtyJIT GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_GUIApp.swift; sourceTree = "<group>"; };
 		D6E552E829B61D4E0083E6A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		D6E5535129B673120083E6A5 /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.1.1.dylib; sourceTree = "<group>"; };
 		D6E5535229B673120083E6A5 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.3.dylib; sourceTree = "<group>"; };
 		D6E5536029B69B940083E6A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		D6E5536429B6A4580083E6A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D6E5538429B6A6DD0083E6A5 /* Structure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structure.h; sourceTree = "<group>"; };
 		D6E5538529B6A6DD0083E6A5 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		D6E5538629B6A6DD0083E6A5 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 				D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */,
 				D6E5531C29B66E0A0083E6A5 /* libimobiledevice */,
 				D6E552E829B61D4E0083E6A5 /* ContentView.swift */,
-				D6E5536429B6A4580083E6A5 /* HomeView.swift */,
+				D661B0F829B6DA9B00B94379 /* SettingsView.swift */,
 				D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */,
 				D6E5535F29B69B8A0083E6A5 /* Extensions */,
 				D6E552EA29B61D510083E6A5 /* Assets.xcassets */,
@@ -535,8 +535,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */,
 				D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */,
-				D6E5536529B6A4580083E6A5 /* HomeView.swift in Sources */,
 				D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */,
 				D6E5536129B69B940083E6A5 /* Color.swift in Sources */,
 				D6E553D729B6AB550083E6A5 /* DeviceInterfacing.swift in Sources */,

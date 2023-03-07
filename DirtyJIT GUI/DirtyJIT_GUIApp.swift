@@ -18,6 +18,10 @@ struct DirtyJIT_GUIApp: App {
                 .onAppear {
                     print("DirtyJIT GUI version \(appVersion)")
                 }
+        }.windowToolbarStyle(UnifiedWindowToolbarStyle())
+            .windowStyle(HiddenTitleBarWindowStyle())
+        Settings {
+            SettingsView()
         }
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
         .windowStyle(HiddenTitleBarWindowStyle())
