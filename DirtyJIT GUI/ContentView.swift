@@ -33,8 +33,7 @@ struct RootView: View {
                     VStack {
                         if showActionView {
                             VStack {
-                                Text("Action View Placeholder")
-                                Text(selectedDevice.name)
+                                ActionView(device: selectedDevice)
                                 VStack {
                                     Label("Back", systemImage: "chevron.left")
                                         .padding()
@@ -150,7 +149,7 @@ struct RootView: View {
         selectedDevice = device
         showActionView = true
     }
-    func dismissActionView() {
+    public func dismissActionView() {
         showActionView = false
     }
 }

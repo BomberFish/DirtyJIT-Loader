@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0F829B6DA9B00B94379 /* SettingsView.swift */; };
+		D661B0FB29B78F5500B94379 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0FA29B78F5500B94379 /* ActionView.swift */; };
 		D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */; };
 		D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E829B61D4E0083E6A5 /* ContentView.swift */; };
 		D6E552EB29B61D510083E6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E552EA29B61D510083E6A5 /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 
 /* Begin PBXFileReference section */
 		D661B0F829B6DA9B00B94379 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D661B0FA29B78F5500B94379 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirtyJIT Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_GUIApp.swift; sourceTree = "<group>"; };
 		D6E552E829B61D4E0083E6A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */,
 				D6E5531C29B66E0A0083E6A5 /* libimobiledevice */,
 				D6E552E829B61D4E0083E6A5 /* ContentView.swift */,
+				D661B0FA29B78F5500B94379 /* ActionView.swift */,
 				D661B0F829B6DA9B00B94379 /* SettingsView.swift */,
 				D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */,
 				D6E5535F29B69B8A0083E6A5 /* Extensions */,
@@ -535,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D661B0FB29B78F5500B94379 /* ActionView.swift in Sources */,
 				D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */,
 				D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */,
 				D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */,
