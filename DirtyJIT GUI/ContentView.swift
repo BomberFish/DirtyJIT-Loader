@@ -19,7 +19,7 @@ struct RootView: View {
             )
             .ignoresSafeArea()
             .onAppear {
-                withAnimation(.linear(duration: 10.0).repeatForever(autoreverses: true)) {
+                withAnimation(.easeInOut(duration: 6.0).repeatForever(autoreverses: true)) {
                     gradientReversed.toggle()
                 }
             }

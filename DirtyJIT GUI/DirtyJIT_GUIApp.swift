@@ -14,7 +14,7 @@ struct DirtyJIT_GUIApp: App {
     var body: some Scene {
         WindowGroup("") {
             RootView()
-                .preferredColorScheme(.dark)
+                // .preferredColorScheme(.dark)
                 .onAppear {
                     print("DirtyJIT GUI version \(appVersion)")
                 }
