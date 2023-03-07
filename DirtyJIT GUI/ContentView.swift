@@ -33,26 +33,32 @@ struct RootView: View {
                     VStack {
                         if allDevices.isEmpty {
                             VStack {
-                                Image(systemName: "iphone.slash")
-                                    .font(.system(size: 50))
-                                Text("No devices connected")
-                                    .font(.system(.largeTitle))
-                                    .fontWeight(.bold)
-                                Text("Connect an iPhone, iPad, or iPod touch to continue.")
-                                    .font(.system(.headline))
-                                    .fontWeight(.regular)
+                                VStack {
+                                    Image(systemName: "iphone.slash")
+                                        .font(.system(size: 50))
+                                    Text("No devices connected")
+                                        .font(.system(.largeTitle))
+                                        .fontWeight(.bold)
+                                    Text("Connect an iPhone, iPad, or iPod touch to continue.")
+                                        .font(.system(.headline))
+                                        .fontWeight(.regular)
+                                }
+                                .padding()
+                                
+                                Button(action: {allDevices = getDevices()}, label: {
+                                    Label("Rescan", systemImage: "arrow.triangle.2.circlepath")
+                                })
+                                .padding()
+                                .background(.blue)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .padding()
-                            
-                            Button(action: {allDevices = getDevices()}, label: {
-                                Label("Rescan", systemImage: "arrow.triangle.2.circlepath")
-                            })
-                            .padding()
-                            .background(.blue)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .buttonStyle(PlainButtonStyle())
                         } else {
                         ForEach(allDevices) {device in
+                            HStack {
+                                Image("iPhone-Notch")
+                                    .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 VStack {
                                     Text(device.name)
                                         .font(.system(.title2))
@@ -62,6 +68,7 @@ struct RootView: View {
                                         Text(device.uuid)
                                     }
                                 }
+                            }
                                 .padding()
                                 .frame(maxWidth: 450, maxHeight: 200)
                                 .background(.regularMaterial)

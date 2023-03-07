@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "com.apple.iphone-7-plus-1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "com.apple.iphone-7-plus-1 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "com.apple.iphone-7-plus-1 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -12,6 +12,7 @@ func getDevices() -> [iDevice] {
     var i: CInt = 0
     var device_list: UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>? = nil
     var devicenames: [iDevice] = []
+    let unknownName: UnsafeMutablePointer<Int8> =  stringToUnsafeUint8(string: "Unknown")
     
     idevice_get_device_list(&device_list, &i)
     print("Number of devices: \(i)")
@@ -31,14 +32,20 @@ func getDevices() -> [iDevice] {
         var name: UnsafeMutablePointer<Int8>? = nil
         lockdownd_get_device_name(lockdown, &name);
         
-        print (" - " + String(cString: name!))
-        devicenames.append(iDevice(name: String(cString: name!), uuid: String(uuid)))
+        print (" - " + String(cString: name ?? unknownName))
+        devicenames.append(iDevice(name: String(cString: name ?? unknownName), uuid: String(uuid)))
         
     }
     
     idevice_device_list_free(device_list)
     print(devicenames)
     return devicenames
+}
+
+func stringToUnsafeUint8(string: String) -> UnsafeMutablePointer<Int8> {
+    let cs = (string as NSString).utf8String
+    var buffer = UnsafeMutablePointer<Int8>(mutating: cs)
+    return buffer!
 }
 
 struct iDevice: Identifiable, Equatable {
