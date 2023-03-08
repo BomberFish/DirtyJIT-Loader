@@ -12,6 +12,7 @@ struct RootView: View {
     @State var showError = false
     @State var gradientReversed = false
     @State var redactUUID = UserDefaults.standard.bool(forKey: "redactUUID")
+    @State var demoMode = UserDefaults.standard.bool(forKey: "demoMode")
     @State var allDevices = getDevices()
     @State var showActionView = false
     @State var selectedDevice = iDevice(name: "", uuid: "")
@@ -26,18 +27,37 @@ struct RootView: View {
             VStack {
                 VStack {
                     VStack {
-                        if showActionView {
+                        if showActionView && !(allDevices.isEmpty){
                             VStack {
                                 ActionView(device: selectedDevice)
                                 VStack {
+                                    Button(action:{
+                                        NSWorkspace.shared.open(NSURL(string: "https://nightly.link/verygenericname/WDBDDISSH/workflows/main/main")! as URL)
+                                    }, label:{
+                                        Label("Download Link", systemImage: "arrow.down.circle")
+                                            .padding()
+                                    })
+                                    .buttonStyle(PlainButtonStyle())
+                                    //.background(.thinMaterial)
+                                }
+                                //.clipShape(RoundedRectangle(cornerRadius: 10))
+                                // handle clicks on the bg
+                                .onTapGesture {
+                                    NSWorkspace.shared.open(NSURL(string: "https://nightly.link/verygenericname/WDBDDISSH/workflows/main/main")! as URL)
+                                }
+                                    VStack {
                                     Label("Back", systemImage: "chevron.left")
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .buttonStyle(PlainButtonStyle())
+                                        .padding()
                                 }
                                 .onTapGesture {
-                                    dismissActionView()
+                                    showActionView = false
                                 }
                             }
+                            .padding()
+                            .background(.regularMaterial)
+                            .cornerRadius(10)
                         } else {
                             VStack {
                                 if allDevices.isEmpty {
@@ -57,22 +77,17 @@ struct RootView: View {
                                         }
                                         .padding()
                                     }
-                                    .onAppear {
-                                        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                                            allDevices = getDevices()
-                                            if !(allDevices.isEmpty) {
-                                                timer.invalidate()
-                                            }
-                                        }
-                                    }
+                                    
                                 } else {
                                     VStack {
                                         if allDevices.count == 1 {
                                             Text("1 device found")
                                                 .font(.system(.largeTitle))
+                                                .fontWeight(.bold)
                                         } else {
-                                            Text(String(allDevices.count))
+                                            Text("\(String(allDevices.count)) devices found")
                                                 .font(.system(.largeTitle))
+                                                .fontWeight(.bold)
                                         }
                                             
                                         ForEach(allDevices) { device in
@@ -83,10 +98,29 @@ struct RootView: View {
                                                 VStack {
                                                     Text(device.name)
                                                         .font(.system(.title2))
-                                                    if redactUUID {
+                                                    if redactUUID && !demoMode {
                                                         Text("0000XXXX-XXXXXXXXXXXXXXXX")
                                                     } else {
                                                         Text(device.uuid)
+                                                    }
+                                                    VStack {
+                                                        Button(action:{
+                                                            print("Selected \(device.name)")
+                                                            selectedDevice = device
+                                                            showActionView = true
+                                                        }, label:{
+                                                            Label("Choose this device", systemImage: "checkmark.circle")
+                                                                .padding()
+                                                        })
+                                                        .buttonStyle(PlainButtonStyle())
+                                                        .background(.thinMaterial)
+                                                    }
+                                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                                    // handle clicks on the bg
+                                                    .onTapGesture {
+                                                        print("Selected \(device.name)")
+                                                        selectedDevice = device
+                                                        showActionView = true
                                                     }
                                                 }
                                             }
@@ -95,15 +129,6 @@ struct RootView: View {
                                             .frame(maxWidth: 450, maxHeight: 200)
                                             .background(.regularMaterial)
                                             .cornerRadius(10)
-                                                
-                                            .onTapGesture {
-                                                print("Selected \(device.name)")
-                                                presentActionView(device: device)
-                                                if getDevices().isEmpty {
-                                                    allDevices = []
-                                                    dismissActionView()
-                                                }
-                                            }
                                         }
                                     }
                                 }
@@ -119,6 +144,22 @@ struct RootView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.ultraThinMaterial)
+            .onAppear {
+                if demoMode {
+                    print("DEMO MODE")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                        print("Displaying demo devices...")
+                        allDevices = [iDevice(name: "Example iPhone XR", uuid: "00008020-XXXXXXXXXXXXXXXX"), iDevice(name: "Example iPhone 11", uuid: "00008030-XXXXXXXXXXXXXXXX")]
+                    }
+                } else {
+                    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                        allDevices = getDevices()
+                        //                    if !(allDevices.isEmpty) {
+                        //                        timer.invalidate()
+                        //                    }
+                    }
+                }
+            }
                 
             .alert("Error!", isPresented: $showError) {
                 Button("OK", role: .cancel) {}
@@ -137,15 +178,6 @@ struct RootView: View {
                 Spacer()
             }
         }
-    }
-
-    func presentActionView(device: iDevice) {
-        selectedDevice = device
-        showActionView = true
-    }
-
-    public func dismissActionView() {
-        showActionView = false
     }
 }
 

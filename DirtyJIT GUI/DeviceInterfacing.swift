@@ -39,7 +39,7 @@ func getDevices() -> [iDevice] {
         afc_client_start_service(dev, &afc_client, "DirtyJIT")
         
         // TODO: Device type
-        var device_info: UnsafeMutablePointer<UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>?>? = nil
+        // var device_info: UnsafeMutablePointer<UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>?>? = nil
         // afc_get_device_info(afc_client, &device_info)
         // print(device_info as Any)
         
@@ -51,6 +51,13 @@ func getDevices() -> [iDevice] {
     idevice_device_list_free(device_list)
     // print(devicenames)
     return devicenames
+}
+
+func mountImage(uuid: String, imagePath: String, signaturePath: String) {
+    var dev: idevice_t? = nil
+    var cli: mobile_image_mounter_client_t? = nil
+    idevice_new_with_options(&dev, uuid, idevice_options(rawValue: 1 << 2))
+    
 }
 
 func stringToUnsafeUint8(string: String) -> UnsafeMutablePointer<Int8> {
