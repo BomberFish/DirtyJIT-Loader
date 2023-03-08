@@ -15,7 +15,6 @@ struct RootView: View {
     @State var allDevices = getDevices()
     @State var showActionView = false
     @State var selectedDevice = iDevice(name: "", uuid: "")
-    @State private var homeOpacity = 0.0
     
     var body: some View {
         ZStack {
@@ -117,7 +116,6 @@ struct RootView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(NSColor.secondaryLabelColor))
                 }
-                .opacity(homeOpacity)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.ultraThinMaterial)
