@@ -54,10 +54,15 @@ func getDevices() -> [iDevice] {
 }
 
 func mountImage(uuid: String, imagePath: String, signaturePath: String) {
+    print("Mounting image \(imagePath) with signature \(signaturePath)...")
+    print("Initializing iDevice...")
     var dev: idevice_t? = nil
-    var cli: mobile_image_mounter_client_t? = nil
     idevice_new_with_options(&dev, uuid, idevice_options(rawValue: 1 << 2))
-    
+    print("Initializing mobile_image_mounter client...")
+    var mimclient: mobile_image_mounter_client_t? = nil
+    mobile_image_mounter_start_service(dev, &mimclient, "DirtyJIT")
+    print("Freeing mobile_image_mounter client...")
+    mobile_image_mounter_free(mimclient)
 }
 
 func stringToUnsafeUint8(string: String) -> UnsafeMutablePointer<Int8> {

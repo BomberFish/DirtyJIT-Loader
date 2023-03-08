@@ -29,7 +29,7 @@ struct ActionView: View {
                                 let panel = NSOpenPanel()
                                 panel.allowsMultipleSelection = false
                                 panel.canChooseDirectories = false
-                                // This is deprecated but I couldn't give a single flying fuck,
+                                // This is deprecated but I couldn't give a single flying fuck,.
                                 panel.allowedFileTypes = ["dmg"]
                                 if panel.runModal() == .OK {
                                     self.dmgName = panel.url?.lastPathComponent ?? "<none>"
@@ -50,7 +50,7 @@ struct ActionView: View {
                             let panel = NSOpenPanel()
                             panel.allowsMultipleSelection = false
                             panel.canChooseDirectories = false
-                            // This is deprecated but I couldn't give a single flying fuck,
+                            // This is deprecated but I couldn't give a single flying fuck.
                             panel.allowedFileTypes = ["dmg"]
                             if panel.runModal() == .OK {
                                 self.dmgName = panel.url?.lastPathComponent ?? "<none>"
@@ -66,7 +66,7 @@ struct ActionView: View {
                                 let panel = NSOpenPanel()
                                 panel.allowsMultipleSelection = false
                                 panel.canChooseDirectories = false
-                                // This is deprecated but I couldn't give a single flying fuck,
+                                // This is deprecated but I couldn't give a single flying fuck.
                                 panel.allowedFileTypes = ["signature"]
                                 if panel.runModal() == .OK {
                                     self.sigName = panel.url?.lastPathComponent ?? "<none>"
@@ -87,7 +87,7 @@ struct ActionView: View {
                             let panel = NSOpenPanel()
                             panel.allowsMultipleSelection = false
                             panel.canChooseDirectories = false
-                            // This is deprecated but I couldn't give a single flying fuck,
+                            // This is deprecated but I couldn't give a single flying fuck.
                             panel.allowedFileTypes = ["signature"]
                             if panel.runModal() == .OK {
                                 self.sigName = panel.url?.lastPathComponent ?? "<none>"
@@ -98,21 +98,23 @@ struct ActionView: View {
                     }
                 }
                 Text("")
-                VStack {
+                if dmgChosen && sigChosen {
                     VStack {
-                        Button(action:{
+                        VStack {
+                            Button(action:{
+                                print("would mount image")
+                            }, label:{
+                                Label("Apply", systemImage: "checkmark.seal")
+                                    .padding()
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            .background(.thinMaterial)
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        // handle clicks on the bg
+                        .onTapGesture {
                             print("would mount image")
-                        }, label:{
-                            Label("Apply", systemImage: "checkmark.seal")
-                                .padding()
-                        })
-                        .buttonStyle(PlainButtonStyle())
-                        .background(.thinMaterial)
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    // handle clicks on the bg
-                    .onTapGesture {
-                        print("would mount image")
+                        }
                     }
                 }
                 Text("")
