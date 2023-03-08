@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0F829B6DA9B00B94379 /* SettingsView.swift */; };
 		D661B0FB29B78F5500B94379 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0FA29B78F5500B94379 /* ActionView.swift */; };
-		D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */; };
-		D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E829B61D4E0083E6A5 /* ContentView.swift */; };
+		D66E7EDB29B80513007BB3FF /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = D66E7EDA29B80513007BB3FF /* FluidGradient */; };
+		D6E552E729B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E629B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift */; };
+		D6E552E929B61D4E0083E6A5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E829B61D4E0083E6A5 /* RootView.swift */; };
 		D6E552EB29B61D510083E6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E552EA29B61D510083E6A5 /* Assets.xcassets */; };
 		D6E552EF29B61D510083E6A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E552EE29B61D510083E6A5 /* Preview Assets.xcassets */; };
 		D6E552F929B61D510083E6A5 /* DirtyJIT_GUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552F829B61D510083E6A5 /* DirtyJIT_GUITests.swift */; };
@@ -114,8 +115,8 @@
 		D661B0F829B6DA9B00B94379 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D661B0FA29B78F5500B94379 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirtyJIT Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_GUIApp.swift; sourceTree = "<group>"; };
-		D6E552E829B61D4E0083E6A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6E552E629B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_LoaderApp.swift; sourceTree = "<group>"; };
+		D6E552E829B61D4E0083E6A5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D6E552EA29B61D510083E6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6E552EE29B61D510083E6A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6E552F429B61D510083E6A5 /* DirtyJIT GUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirtyJIT GUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +187,7 @@
 				D6E5535329B673120083E6A5 /* libcrypto.1.1.dylib in Frameworks */,
 				D6E5532529B66ED00083E6A5 /* libplist-2.0.3.dylib in Frameworks */,
 				D6E5535429B673120083E6A5 /* libssl.1.1.dylib in Frameworks */,
+				D66E7EDB29B80513007BB3FF /* FluidGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,9 +231,9 @@
 		D6E552E529B61D4E0083E6A5 /* DirtyJIT GUI */ = {
 			isa = PBXGroup;
 			children = (
-				D6E552E629B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift */,
+				D6E552E629B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift */,
 				D6E5531C29B66E0A0083E6A5 /* libimobiledevice */,
-				D6E552E829B61D4E0083E6A5 /* ContentView.swift */,
+				D6E552E829B61D4E0083E6A5 /* RootView.swift */,
 				D661B0FA29B78F5500B94379 /* ActionView.swift */,
 				D661B0F829B6DA9B00B94379 /* SettingsView.swift */,
 				D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */,
@@ -421,6 +423,7 @@
 			);
 			name = "DirtyJIT Loader";
 			packageProductDependencies = (
+				D66E7EDA29B80513007BB3FF /* FluidGradient */,
 			);
 			productName = "DirtyJIT GUI";
 			productReference = D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */;
@@ -495,6 +498,7 @@
 			);
 			mainGroup = D6E552DA29B61D4E0083E6A5;
 			packageReferences = (
+				D66E7ED929B80513007BB3FF /* XCRemoteSwiftPackageReference "FluidGradient" */,
 			);
 			productRefGroup = D6E552E429B61D4E0083E6A5 /* Products */;
 			projectDirPath = "";
@@ -540,8 +544,8 @@
 			files = (
 				D661B0FB29B78F5500B94379 /* ActionView.swift in Sources */,
 				D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */,
-				D6E552E929B61D4E0083E6A5 /* ContentView.swift in Sources */,
-				D6E552E729B61D4E0083E6A5 /* DirtyJIT_GUIApp.swift in Sources */,
+				D6E552E929B61D4E0083E6A5 /* RootView.swift in Sources */,
+				D6E552E729B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift in Sources */,
 				D6E5536129B69B940083E6A5 /* Color.swift in Sources */,
 				D6E553D729B6AB550083E6A5 /* DeviceInterfacing.swift in Sources */,
 			);
@@ -937,6 +941,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D66E7ED929B80513007BB3FF /* XCRemoteSwiftPackageReference "FluidGradient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cindori/FluidGradient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D66E7EDA29B80513007BB3FF /* FluidGradient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D66E7ED929B80513007BB3FF /* XCRemoteSwiftPackageReference "FluidGradient" */;
+			productName = FluidGradient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6E552DB29B61D4E0083E6A5 /* Project object */;
 }
