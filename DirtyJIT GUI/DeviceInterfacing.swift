@@ -61,16 +61,17 @@ func mountImage(uuid: String, imagePath: String, signaturePath: String) {
     print("Initializing mobile_image_mounter client...")
     var mimclient: mobile_image_mounter_client_t? = nil
     mobile_image_mounter_start_service(dev, &mimclient, "DirtyJIT")
+    print("Uploading image...")
+    var dmgSize: Int? = nil
+    var sigSize: UInt16? = nil
+    
+    dmgSize = getFileSizeAsInt(path: imagePath)
+    sigSize = getFileSizeAsUInt16(path: signaturePath)
+    
+    //mobile_image_mounter_upload_image(mimclient, "Developer", dmgSize!, <#T##signature: UnsafePointer<CChar>!##UnsafePointer<CChar>?#>, sigSize!, <#T##upload_cb: mobile_image_mounter_upload_cb_t!##mobile_image_mounter_upload_cb_t?##(UnsafeMutableRawPointer?, Int, UnsafeMutableRawPointer?) -> Int#>, <#T##userdata: UnsafeMutableRawPointer!##UnsafeMutableRawPointer?#>)
     print("Freeing mobile_image_mounter client...")
     mobile_image_mounter_free(mimclient)
 }
-
-func stringToUnsafeUint8(string: String) -> UnsafeMutablePointer<Int8> {
-    let cs = (string as NSString).utf8String
-    let buffer = UnsafeMutablePointer<Int8>(mutating: cs)
-    return buffer!
-}
-
 
 
 struct iDevice: Identifiable, Equatable {

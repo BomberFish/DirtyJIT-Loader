@@ -10,6 +10,7 @@
 		D661B0F929B6DA9B00B94379 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0F829B6DA9B00B94379 /* SettingsView.swift */; };
 		D661B0FB29B78F5500B94379 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D661B0FA29B78F5500B94379 /* ActionView.swift */; };
 		D66E7EDB29B80513007BB3FF /* FluidGradient in Frameworks */ = {isa = PBXBuildFile; productRef = D66E7EDA29B80513007BB3FF /* FluidGradient */; };
+		D66E7EDD29B95AA8007BB3FF /* TypeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E7EDC29B95AA8007BB3FF /* TypeUtils.swift */; };
 		D6E552E729B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E629B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift */; };
 		D6E552E929B61D4E0083E6A5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E552E829B61D4E0083E6A5 /* RootView.swift */; };
 		D6E552EB29B61D510083E6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E552EA29B61D510083E6A5 /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 /* Begin PBXFileReference section */
 		D661B0F829B6DA9B00B94379 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D661B0FA29B78F5500B94379 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		D66E7EDC29B95AA8007BB3FF /* TypeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeUtils.swift; sourceTree = "<group>"; };
 		D6E552E329B61D4E0083E6A5 /* DirtyJIT Loader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirtyJIT Loader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E552E629B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtyJIT_LoaderApp.swift; sourceTree = "<group>"; };
 		D6E552E829B61D4E0083E6A5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				D661B0FA29B78F5500B94379 /* ActionView.swift */,
 				D661B0F829B6DA9B00B94379 /* SettingsView.swift */,
 				D6E553D629B6AB550083E6A5 /* DeviceInterfacing.swift */,
+				D66E7EDC29B95AA8007BB3FF /* TypeUtils.swift */,
 				D6E5535F29B69B8A0083E6A5 /* Extensions */,
 				D6E552EA29B61D510083E6A5 /* Assets.xcassets */,
 				D6E552ED29B61D510083E6A5 /* Preview Content */,
@@ -547,6 +550,7 @@
 				D6E552E929B61D4E0083E6A5 /* RootView.swift in Sources */,
 				D6E552E729B61D4E0083E6A5 /* DirtyJIT_LoaderApp.swift in Sources */,
 				D6E5536129B69B940083E6A5 /* Color.swift in Sources */,
+				D66E7EDD29B95AA8007BB3FF /* TypeUtils.swift in Sources */,
 				D6E553D729B6AB550083E6A5 /* DeviceInterfacing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -103,6 +103,7 @@ struct ActionView: View {
                         VStack {
                             Button(action:{
                                 print("would mount image")
+                                mountImage(uuid: device.uuid, imagePath: dmgPath, signaturePath: sigPath)
                             }, label:{
                                 Label("Apply", systemImage: "checkmark.seal")
                                     .padding()

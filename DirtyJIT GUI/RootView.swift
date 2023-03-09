@@ -146,6 +146,7 @@ struct RootView: View {
             .background(.ultraThinMaterial)
             .onAppear {
                 if demoMode {
+                    allDevices = []
                     print("DEMO MODE")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                         print("Displaying demo devices...")
