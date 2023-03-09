@@ -42,3 +42,20 @@ func getFileSizeAsUInt16(path: String) -> UInt16 {
         return 0
     }
 }
+
+func stringToUnsafeChar(string: String) -> UnsafePointer<CChar> {
+    return string.withCString { $0 }
+}
+
+// Thanks, ChatGPT!
+func fileToUnsafeCchar(path: String) -> UnsafePointer<CChar> {
+    do {
+        let data = try Data(contentsOf: URL.init(string: path)!)
+        let unsafePointer = data.withUnsafeBytes { $0.bindMemory(to: CChar.self).baseAddress }
+        return unsafePointer!
+    }
+    catch {
+        print("penis")
+    }
+    return stringToUnsafeChar(string: "")
+}

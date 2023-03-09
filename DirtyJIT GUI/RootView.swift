@@ -12,10 +12,11 @@ struct RootView: View {
     @State var showError = false
     @State var gradientReversed = false
     @State var redactUUID = UserDefaults.standard.bool(forKey: "redactUUID")
-    @State var demoMode = UserDefaults.standard.bool(forKey: "demoMode")
     @State var allDevices = getDevices()
     @State var showActionView = false
     @State var selectedDevice = iDevice(name: "", uuid: "")
+    // Fun fact: I made demo mode because I forgot to bring my Lightning cable to school
+    @State var demoMode = UserDefaults.standard.bool(forKey: "demoMode")
     
     var body: some View {
         ZStack {

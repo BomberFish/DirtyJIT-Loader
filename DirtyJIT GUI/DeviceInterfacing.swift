@@ -68,7 +68,7 @@ func mountImage(uuid: String, imagePath: String, signaturePath: String) {
     dmgSize = getFileSizeAsInt(path: imagePath)
     sigSize = getFileSizeAsUInt16(path: signaturePath)
     
-    //mobile_image_mounter_upload_image(mimclient, "Developer", dmgSize!, <#T##signature: UnsafePointer<CChar>!##UnsafePointer<CChar>?#>, sigSize!, <#T##upload_cb: mobile_image_mounter_upload_cb_t!##mobile_image_mounter_upload_cb_t?##(UnsafeMutableRawPointer?, Int, UnsafeMutableRawPointer?) -> Int#>, <#T##userdata: UnsafeMutableRawPointer!##UnsafeMutableRawPointer?#>)
+    mobile_image_mounter_upload_image(mimclient, "Developer", dmgSize!, fileToUnsafeCchar(path: signaturePath), sigSize!, <#T##upload_cb: mobile_image_mounter_upload_cb_t!##mobile_image_mounter_upload_cb_t?##(UnsafeMutableRawPointer?, Int, UnsafeMutableRawPointer?) -> Int#>, <#T##userdata: UnsafeMutableRawPointer!##UnsafeMutableRawPointer?#>)
     print("Freeing mobile_image_mounter client...")
     mobile_image_mounter_free(mimclient)
 }
